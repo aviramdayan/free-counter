@@ -2,6 +2,7 @@ application: free-counter
 version: 0-001
 runtime: python
 api_version: 1
+default_expiration: "1d"
 
 handlers:
 - url: /images

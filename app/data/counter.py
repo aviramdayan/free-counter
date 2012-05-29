@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 class Counter(dict):
     def expire(self):
         
-        #avoind the dot to performance
+        #avoiding the dot to performance
         now=datetime.now
         for k in self.keys():
             if self[k] < now():

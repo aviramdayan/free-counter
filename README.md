@@ -1,5 +1,5 @@
 ﻿Really simple online visitors counter using google appengine's memcache.
-It was build to use with "SiteApps.com"
+It was build to use with "SiteApps.com - http://siteapps.com/app/online_visitor_counter-238"
 
 Search for the app "Online Visitor Counter"
 

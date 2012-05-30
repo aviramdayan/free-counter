@@ -16,6 +16,8 @@ class Get(webapp.RequestHandler):
             return self.response.write('')
 
         status = memcache.get(site) or counter.Counter()
+        #TODO: Expire must be on the Counter __init__
+        status.expire()
         status.incr(uid)
         memcache.set(site, status)
         return self.response.out.write('__callback({"online": %s});' % 

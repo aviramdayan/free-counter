@@ -1,0 +1,5 @@
+cron:
+
+- description: save logs json on ds
+  url: /graphssss/slogs/
+  schedule: every 2 minutes

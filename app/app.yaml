@@ -16,11 +16,15 @@ handlers:
   static_files: static/html/index.html
   upload: static/html/index.html
 
+- url: /graphssss/.*
+  script: /graphssss/main.py
+
 - url: /.*
   script: main.py
 
 builtins:
 - remote_api: on
+- appstats: on
 
 inbound_services:
 - warmup

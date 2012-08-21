@@ -1,23 +1,19 @@
 # encoding: utf-8
-
-from time import time
-
+import logging
 from google.appengine.ext import webapp
 from google.appengine.api import memcache
-
 
 
 from data import counter
 
 class Get(webapp.RequestHandler):
     def get(self):
-        start = time()
         #TODO: put these fields/configurations on a conf file
         self.response.headers['Content-Type'] = 'text/x-javascript'
         site=self.request.get('s')
         uid = self.request.get('uid', '')
         if not site or not uid:
-            return self.response.write('')
+            return self.response.out.write('')
 
         status = memcache.get(site) or counter.Counter()
         #TODO: Expire must be on the Counter __init__

@@ -1,5 +1,5 @@
 application: free-counter
-version: 0-001
+version: 0-002
 runtime: python
 api_version: 1
 default_expiration: "1d"
